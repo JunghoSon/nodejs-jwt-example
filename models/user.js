@@ -17,9 +17,9 @@ User.statics.create = function(username, password){
 }
 
 User.statics.findOneByUsername = function(username){
-    return this.findOne(
+    return this.findOne({
         username
-    ).exec()
+    }).exec()
 }
 
 User.methods.verify = function(password){
