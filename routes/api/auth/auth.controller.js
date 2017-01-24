@@ -100,3 +100,10 @@ exports.login = (req, res) => {
     .then(respond)
     .catch(onError)
 }
+
+exports.check = (req, res) => {
+    res.json({
+        success: true,
+        info: req.decoded
+    })
+}
